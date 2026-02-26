@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+==========================================================================
+【AI HANDOVER NOTE】
+1. DESIGN PHILOSOPHY:
+   - The design system, 'Stable Haven,' is built on the pillars of Empathy and Authority. Given the sensitive nature of foreclosure, the UI avoids 'panic' triggers (bright reds) in favor of a grounding Brick Red and a supportive Salmon Pink derived from the GMASH logo.
+   - Visual Style: 'Warm Professionalism' using large serif headings to establish trust and legacy, paired with modern rounded components (Bento-style) to ensure the tech feels accessible and current.
+   - Strategy: We use a 'Prevention-First' layout hierarchy where resources are presented with soft neutrals, while the 'Sell & Stay' option is highlighted using the branded Salmon Pink accent to indicate a unique, positive path forward.
+
+2. TYPOGRAPHY:
+   - Serif (Source Serif 4): Used for all primary headlines and value propositions. It mimics the logo's serif typeface, evoking a sense of established credibility and legal safety.
+   - Sans (Plus Jakarta Sans): A friendly, highly legible geometric sans-serif for body copy and form inputs, ensuring clarity for users who may be under high stress.
+   - Mono (JetBrains Mono): Reserved for data points, timelines, or financial estimates to provide a sense of mathematical precision.
+
+3. COLOR SYSTEM:
+   - The 'Brick Red' (H: 28) is the primary foundation, used for structural elements and main CTAs. It represents the 'M' in the logo and the 'Home' silhouette.
+   - The 'Salmon Pink' (H: 28, higher lightness) is mapped to --accent, used for 'Stay-in-place' highlights and secondary CTAs to feel more inviting and less 'urgent' than the primary red.
+   - Semantic logic: Success colors use an Emerald-leaning hue (H: 155) to symbolize financial recovery and growth.
+
+4. USAGE GUIDE:
+   - Layout: Use a 'Centered Container' with generous 128px vertical padding to create a calm, non-claustrophobic reading experience.
+   - Surfaces: Card elements should use a subtle border (0.05 opacity) and high radius (0.75rem) to feel soft and approachable.
+   - Effects: Use soft amber-tinted shadows instead of pure gray to maintain the 'warm home' atmosphere.
+==========================================================================
+*/
+
+:root {
+  /* Typography */
+  --font-sans: Plus Jakarta Sans, system-ui, sans-serif;
+  --font-mono: JetBrains Mono, monospace;
+  
+  /* Radius */
+  --radius: 0.75rem;
+
+  /* Core UI Tokens */
+  --background: oklch(0.99 0.005 30);
+  --foreground: oklch(0.15 0.02 28);
+  --card: oklch(1.0 0.0 0);
+  --card-foreground: oklch(0.15 0.02 28);
+  --popover: oklch(1.0 0.0 0);
+  --popover-foreground: oklch(0.15 0.02 28);
+  --primary: oklch(0.48 0.16 28);
+  --primary-foreground: oklch(0.98 0.01 30);
+  --secondary: oklch(0.94 0.02 30);
+  --secondary-foreground: oklch(0.35 0.12 28);
+  --muted: oklch(0.96 0.01 30);
+  --muted-foreground: oklch(0.45 0.03 28);
+  --accent: oklch(0.72 0.14 28);
+  --accent-foreground: oklch(0.25 0.08 28);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.01 30);
+  --border: oklch(0.90 0.02 30);
+  --input: oklch(0.90 0.02 30);
+  --ring: oklch(0.48 0.16 28);
+  
+  /* Chart Tokens */
+  --chart-1: oklch(0.48 0.16 28);
+  --chart-2: oklch(0.72 0.14 28);
+  --chart-3: oklch(0.45 0.10 200);
+  --chart-4: oklch(0.85 0.12 80);
+  --chart-5: oklch(0.65 0.15 155);
+  
+  /* Sidebar Tokens */
+  --sidebar: oklch(0.98 0.01 30);
+  --sidebar-foreground: oklch(0.25 0.03 28);
+  --sidebar-primary: oklch(0.48 0.16 28);
+  --sidebar-primary-foreground: oklch(0.98 0.01 30);
+  --sidebar-accent: oklch(0.94 0.02 30);
+  --sidebar-accent-foreground: oklch(0.48 0.16 28);
+  --sidebar-border: oklch(0.92 0.01 30);
+  --sidebar-ring: oklch(0.48 0.16 28);
+}
+
+.dark {
+  --background: oklch(0.14 0.02 28);
+  --foreground: oklch(0.92 0.01 30);
+  --card: oklch(0.18 0.02 28);
+  --card-foreground: oklch(0.92 0.01 30);
+  --popover: oklch(0.16 0.02 28);
+  --popover-foreground: oklch(0.92 0.01 30);
+  --primary: oklch(0.60 0.18 28);
+  --primary-foreground: oklch(0.12 0.02 28);
+  --secondary: oklch(0.22 0.04 28);
+  --secondary-foreground: oklch(0.85 0.10 28);
+  --muted: oklch(0.22 0.03 28);
+  --muted-foreground: oklch(0.70 0.02 30);
+  --accent: oklch(0.75 0.15 28);
+  --accent-foreground: oklch(0.15 0.05 28);
+  --destructive: oklch(0.45 0.18 25);
+  --destructive-foreground: oklch(0.95 0.01 30);
+  --border: oklch(0.25 0.03 28);
+  --input: oklch(0.25 0.03 28);
+  --ring: oklch(0.60 0.18 28);
+  
+  /* Chart Tokens */
+  --chart-1: oklch(0.60 0.18 28);
+  --chart-2: oklch(0.75 0.15 28);
+  --chart-3: oklch(0.55 0.12 210);
+  --chart-4: oklch(0.80 0.14 90);
+  --chart-5: oklch(0.65 0.18 160);
+  
+  /* Sidebar Tokens */
+  --sidebar: oklch(0.12 0.02 28);
+  --sidebar-foreground: oklch(0.85 0.02 30);
+  --sidebar-primary: oklch(0.60 0.18 28);
+  --sidebar-primary-foreground: oklch(0.12 0.02 28);
+  --sidebar-accent: oklch(0.20 0.04 28);
+  --sidebar-accent-foreground: oklch(0.92 0.01 30);
+  --sidebar-border: oklch(0.22 0.03 28);
+  --sidebar-ring: oklch(0.60 0.18 28);
+}
+
+@theme inline {
+  /* Shadcn Core Mapping */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Charts Mapping */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar Mapping */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Typography */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans min-h-screen;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  code, pre {
+    @apply font-mono;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-primary;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40;
+  }
+}
