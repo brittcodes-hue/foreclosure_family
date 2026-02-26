@@ -169,7 +169,7 @@ export default function Home() {
             >
               <h2 className="text-4xl font-bold mb-6 font-serif">A Haven for Homeowners in Crisis</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                At Gmash LLC, we understand that a house is more than just four walls and a roof—it's a lifetime of memories. When financial hardship strikes, the fear of losing that foundation can be paralyzing.
+                At Gmash, we understand that a house is more than just four walls and a roof—it's a lifetime of memories. When financial hardship strikes, the fear of losing that foundation can be paralyzing.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
                 Our mission is simple: To provide a clear, honest roadmap out of foreclosure. Whether that means negotiating with your lender to keep you in your home or facilitating a fast, fair cash sale to give you a fresh start, we put your dignity first.
