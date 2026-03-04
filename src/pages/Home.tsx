@@ -97,7 +97,7 @@ export default function Home() {
               className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
             >
               Facing foreclosure is overwhelming, but you don't have to face it alone. 
-              Gmash LLC provides compassionate solutions to help you keep your home or move on with dignity.
+              Gmash provides compassionate solutions to help you keep your home or move on with dignity.
             </motion.p>
 
             <motion.div 
