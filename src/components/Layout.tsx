@@ -206,8 +206,8 @@ export function Layout({ children }: LayoutProps) {
               <h4 className="font-bold text-lg mb-8 text-foreground">Get in Touch</h4>
               <ul className="space-y-6">
                 {[ 
-                  { icon: Phone, label: "Call Us", value: "(303) 555-0123" }, 
-                  { icon: Mail, label: "Email Us", value: "support@gmashllc.com" }, 
+                  { icon: Phone, label: "Call Us", value: "(720) 663-7346" }, 
+                  { icon: Mail, label: "Email Us", value: "skyler@gmash.co" }, 
                   { icon: MapPin, label: "Visit Us", value: "1234 Emerald Way, Ste 200, Denver, CO 80202" } 
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-4 group">
