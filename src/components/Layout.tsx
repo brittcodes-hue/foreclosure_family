@@ -208,7 +208,7 @@ export function Layout({ children }: LayoutProps) {
                 {[ 
                   { icon: Phone, label: "Call Us", value: "(720) 663-7346" }, 
                   { icon: Mail, label: "Email Us", value: "skyler@gmash.co" }, 
-                  { icon: MapPin, label: "Visit Us", value: "1234 Emerald Way, Ste 200, Denver, CO 80202" } 
+                  // { icon: MapPin, label: "Visit Us", value: "1234 Emerald Way, Ste 200, Denver, CO 80202" } 
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-4 group">
                     <div className="mt-1 p-2.5 rounded-xl bg-background border border-border/50 text-primary group-hover:scale-110 transition-transform shadow-sm">
